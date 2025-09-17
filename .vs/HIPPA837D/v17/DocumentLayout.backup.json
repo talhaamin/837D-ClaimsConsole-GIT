@@ -1,0 +1,373 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\Projects\\HIPPA\\HIPPA837D\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CBD540A7-1D74-415D-A14B-67BFAD0A4225}|HIPPAWeb\\HIPPAWeb.csproj|f:\\projects\\hippa\\hippa837d\\hippaweb\\wwwroot\\js\\prototype.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{CBD540A7-1D74-415D-A14B-67BFAD0A4225}|HIPPAWeb\\HIPPAWeb.csproj|solutionrelative:hippaweb\\wwwroot\\js\\prototype.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBD540A7-1D74-415D-A14B-67BFAD0A4225}|HIPPAWeb\\HIPPAWeb.csproj|f:\\projects\\hippa\\hippa837d\\hippaweb\\pages\\prototype.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CBD540A7-1D74-415D-A14B-67BFAD0A4225}|HIPPAWeb\\HIPPAWeb.csproj|solutionrelative:hippaweb\\pages\\prototype.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBD540A7-1D74-415D-A14B-67BFAD0A4225}|HIPPAWeb\\HIPPAWeb.csproj|f:\\projects\\hippa\\hippa837d\\hippaweb\\pages\\prototype.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBD540A7-1D74-415D-A14B-67BFAD0A4225}|HIPPAWeb\\HIPPAWeb.csproj|solutionrelative:hippaweb\\pages\\prototype.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBD540A7-1D74-415D-A14B-67BFAD0A4225}|HIPPAWeb\\HIPPAWeb.csproj|f:\\projects\\hippa\\hippa837d\\hippaweb\\wwwroot\\js\\prototype.min.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{CBD540A7-1D74-415D-A14B-67BFAD0A4225}|HIPPAWeb\\HIPPAWeb.csproj|solutionrelative:hippaweb\\wwwroot\\js\\prototype.min.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBD540A7-1D74-415D-A14B-67BFAD0A4225}|HIPPAWeb\\HIPPAWeb.csproj|f:\\projects\\hippa\\hippa837d\\hippaweb\\bundleconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CBD540A7-1D74-415D-A14B-67BFAD0A4225}|HIPPAWeb\\HIPPAWeb.csproj|solutionrelative:hippaweb\\bundleconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBD540A7-1D74-415D-A14B-67BFAD0A4225}|HIPPAWeb\\HIPPAWeb.csproj|f:\\projects\\hippa\\hippa837d\\hippaweb\\pages\\hippa.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CBD540A7-1D74-415D-A14B-67BFAD0A4225}|HIPPAWeb\\HIPPAWeb.csproj|solutionrelative:hippaweb\\pages\\hippa.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBD540A7-1D74-415D-A14B-67BFAD0A4225}|HIPPAWeb\\HIPPAWeb.csproj|f:\\projects\\hippa\\hippa837d\\hippaweb\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CBD540A7-1D74-415D-A14B-67BFAD0A4225}|HIPPAWeb\\HIPPAWeb.csproj|solutionrelative:hippaweb\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBD540A7-1D74-415D-A14B-67BFAD0A4225}|HIPPAWeb\\HIPPAWeb.csproj|f:\\projects\\hippa\\hippa837d\\hippaweb\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CBD540A7-1D74-415D-A14B-67BFAD0A4225}|HIPPAWeb\\HIPPAWeb.csproj|solutionrelative:hippaweb\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBD540A7-1D74-415D-A14B-67BFAD0A4225}|HIPPAWeb\\HIPPAWeb.csproj|f:\\projects\\hippa\\hippa837d\\hippaweb\\hippaweb.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}",
+      "RelativeMoniker": "D:0:0:{CBD540A7-1D74-415D-A14B-67BFAD0A4225}|HIPPAWeb\\HIPPAWeb.csproj|solutionrelative:hippaweb\\hippaweb.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBD540A7-1D74-415D-A14B-67BFAD0A4225}|HIPPAWeb\\HIPPAWeb.csproj|f:\\projects\\hippa\\hippa837d\\hippaweb\\pages\\list\\messagelist.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBD540A7-1D74-415D-A14B-67BFAD0A4225}|HIPPAWeb\\HIPPAWeb.csproj|solutionrelative:hippaweb\\pages\\list\\messagelist.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBD540A7-1D74-415D-A14B-67BFAD0A4225}|HIPPAWeb\\HIPPAWeb.csproj|f:\\projects\\hippa\\hippa837d\\hippaweb\\models\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBD540A7-1D74-415D-A14B-67BFAD0A4225}|HIPPAWeb\\HIPPAWeb.csproj|solutionrelative:hippaweb\\models\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBD540A7-1D74-415D-A14B-67BFAD0A4225}|HIPPAWeb\\HIPPAWeb.csproj|f:\\projects\\hippa\\hippa837d\\hippaweb\\pages\\list\\messagelist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CBD540A7-1D74-415D-A14B-67BFAD0A4225}|HIPPAWeb\\HIPPAWeb.csproj|solutionrelative:hippaweb\\pages\\list\\messagelist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBD540A7-1D74-415D-A14B-67BFAD0A4225}|HIPPAWeb\\HIPPAWeb.csproj|f:\\projects\\hippa\\hippa837d\\hippaweb\\pages\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CBD540A7-1D74-415D-A14B-67BFAD0A4225}|HIPPAWeb\\HIPPAWeb.csproj|solutionrelative:hippaweb\\pages\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBD540A7-1D74-415D-A14B-67BFAD0A4225}|HIPPAWeb\\HIPPAWeb.csproj|f:\\projects\\hippa\\hippa837d\\hippaweb\\pages\\account\\logout.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBD540A7-1D74-415D-A14B-67BFAD0A4225}|HIPPAWeb\\HIPPAWeb.csproj|solutionrelative:hippaweb\\pages\\account\\logout.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBD540A7-1D74-415D-A14B-67BFAD0A4225}|HIPPAWeb\\HIPPAWeb.csproj|f:\\projects\\hippa\\hippa837d\\hippaweb\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CBD540A7-1D74-415D-A14B-67BFAD0A4225}|HIPPAWeb\\HIPPAWeb.csproj|solutionrelative:hippaweb\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBD540A7-1D74-415D-A14B-67BFAD0A4225}|HIPPAWeb\\HIPPAWeb.csproj|f:\\projects\\hippa\\hippa837d\\hippaweb\\pages\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CBD540A7-1D74-415D-A14B-67BFAD0A4225}|HIPPAWeb\\HIPPAWeb.csproj|solutionrelative:hippaweb\\pages\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBD540A7-1D74-415D-A14B-67BFAD0A4225}|HIPPAWeb\\HIPPAWeb.csproj|f:\\projects\\hippa\\hippa837d\\hippaweb\\pages\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CBD540A7-1D74-415D-A14B-67BFAD0A4225}|HIPPAWeb\\HIPPAWeb.csproj|solutionrelative:hippaweb\\pages\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBD540A7-1D74-415D-A14B-67BFAD0A4225}|HIPPAWeb\\HIPPAWeb.csproj|f:\\projects\\hippa\\hippa837d\\hippaweb\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CBD540A7-1D74-415D-A14B-67BFAD0A4225}|HIPPAWeb\\HIPPAWeb.csproj|solutionrelative:hippaweb\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBD540A7-1D74-415D-A14B-67BFAD0A4225}|HIPPAWeb\\HIPPAWeb.csproj|f:\\projects\\hippa\\hippa837d\\hippaweb\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBD540A7-1D74-415D-A14B-67BFAD0A4225}|HIPPAWeb\\HIPPAWeb.csproj|solutionrelative:hippaweb\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBD540A7-1D74-415D-A14B-67BFAD0A4225}|HIPPAWeb\\HIPPAWeb.csproj|f:\\projects\\hippa\\hippa837d\\hippaweb\\pages\\shared\\_layoutlogin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CBD540A7-1D74-415D-A14B-67BFAD0A4225}|HIPPAWeb\\HIPPAWeb.csproj|solutionrelative:hippaweb\\pages\\shared\\_layoutlogin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBD540A7-1D74-415D-A14B-67BFAD0A4225}|HIPPAWeb\\HIPPAWeb.csproj|f:\\projects\\hippa\\hippa837d\\hippaweb\\models\\formmodels\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBD540A7-1D74-415D-A14B-67BFAD0A4225}|HIPPAWeb\\HIPPAWeb.csproj|solutionrelative:hippaweb\\models\\formmodels\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBD540A7-1D74-415D-A14B-67BFAD0A4225}|HIPPAWeb\\HIPPAWeb.csproj|f:\\projects\\hippa\\hippa837d\\hippaweb\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBD540A7-1D74-415D-A14B-67BFAD0A4225}|HIPPAWeb\\HIPPAWeb.csproj|solutionrelative:hippaweb\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "prototype.min.js",
+              "DocumentMoniker": "F:\\Projects\\HIPPA\\HIPPA837D\\HIPPAWeb\\wwwroot\\js\\prototype.min.js",
+              "RelativeDocumentMoniker": "HIPPAWeb\\wwwroot\\js\\prototype.min.js",
+              "ToolTip": "F:\\Projects\\HIPPA\\HIPPA837D\\HIPPAWeb\\wwwroot\\js\\prototype.min.js",
+              "RelativeToolTip": "HIPPAWeb\\wwwroot\\js\\prototype.min.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAACaKAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-12-05T06:20:30.593Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "F:\\Projects\\HIPPA\\HIPPA837D\\HIPPAWeb\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "HIPPAWeb\\Pages\\Index.cshtml",
+              "ToolTip": "F:\\Projects\\HIPPA\\HIPPA837D\\HIPPAWeb\\Pages\\Index.cshtml",
+              "RelativeToolTip": "HIPPAWeb\\Pages\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2023-09-28T15:49:58.827Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Prototype.cshtml",
+              "DocumentMoniker": "F:\\Projects\\HIPPA\\HIPPA837D\\HIPPAWeb\\Pages\\Prototype.cshtml",
+              "RelativeDocumentMoniker": "HIPPAWeb\\Pages\\Prototype.cshtml",
+              "ToolTip": "F:\\Projects\\HIPPA\\HIPPA837D\\HIPPAWeb\\Pages\\Prototype.cshtml",
+              "RelativeToolTip": "HIPPAWeb\\Pages\\Prototype.cshtml",
+              "ViewState": "AgIAADgAAAAAAAAAAAAAAE8AAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2023-09-27T17:34:19.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MessageList.cshtml.cs",
+              "DocumentMoniker": "F:\\Projects\\HIPPA\\HIPPA837D\\HIPPAWeb\\Pages\\List\\MessageList.cshtml.cs",
+              "RelativeDocumentMoniker": "HIPPAWeb\\Pages\\List\\MessageList.cshtml.cs",
+              "ToolTip": "F:\\Projects\\HIPPA\\HIPPA837D\\HIPPAWeb\\Pages\\List\\MessageList.cshtml.cs",
+              "RelativeToolTip": "HIPPAWeb\\Pages\\List\\MessageList.cshtml.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAIBJwBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-09-29T17:20:04.436Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Hippa.cshtml",
+              "DocumentMoniker": "F:\\Projects\\HIPPA\\HIPPA837D\\HIPPAWeb\\Pages\\Hippa.cshtml",
+              "RelativeDocumentMoniker": "HIPPAWeb\\Pages\\Hippa.cshtml",
+              "ToolTip": "F:\\Projects\\HIPPA\\HIPPA837D\\HIPPAWeb\\Pages\\Hippa.cshtml",
+              "RelativeToolTip": "HIPPAWeb\\Pages\\Hippa.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2023-09-20T05:18:03.75Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "prototype.js",
+              "DocumentMoniker": "F:\\Projects\\HIPPA\\HIPPA837D\\HIPPAWeb\\wwwroot\\js\\prototype.js",
+              "RelativeDocumentMoniker": "HIPPAWeb\\wwwroot\\js\\prototype.js",
+              "ToolTip": "F:\\Projects\\HIPPA\\HIPPA837D\\HIPPAWeb\\wwwroot\\js\\prototype.js",
+              "RelativeToolTip": "HIPPAWeb\\wwwroot\\js\\prototype.js",
+              "ViewState": "AgIAAMcAAAAAAAAAAAAqwNkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2023-09-27T17:35:32.397Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Prototype.cshtml.cs",
+              "DocumentMoniker": "F:\\Projects\\HIPPA\\HIPPA837D\\HIPPAWeb\\Pages\\Prototype.cshtml.cs",
+              "RelativeDocumentMoniker": "HIPPAWeb\\Pages\\Prototype.cshtml.cs",
+              "ToolTip": "F:\\Projects\\HIPPA\\HIPPA837D\\HIPPAWeb\\Pages\\Prototype.cshtml.cs",
+              "RelativeToolTip": "HIPPAWeb\\Pages\\Prototype.cshtml.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAwwD0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-09-29T07:57:40.573Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "F:\\Projects\\HIPPA\\HIPPA837D\\HIPPAWeb\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "HIPPAWeb\\Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "F:\\Projects\\HIPPA\\HIPPA837D\\HIPPAWeb\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "HIPPAWeb\\Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAIIAAAAAAAAAAIBJwI4AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2023-09-29T11:40:40.964Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "bundleconfig.json",
+              "DocumentMoniker": "F:\\Projects\\HIPPA\\HIPPA837D\\HIPPAWeb\\bundleconfig.json",
+              "RelativeDocumentMoniker": "HIPPAWeb\\bundleconfig.json",
+              "ToolTip": "F:\\Projects\\HIPPA\\HIPPA837D\\HIPPAWeb\\bundleconfig.json",
+              "RelativeToolTip": "HIPPAWeb\\bundleconfig.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-05T18:30:47.32Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Logout.cshtml",
+              "DocumentMoniker": "F:\\Projects\\HIPPA\\HIPPA837D\\HIPPAWeb\\Pages\\Account\\Logout.cshtml",
+              "RelativeDocumentMoniker": "HIPPAWeb\\Pages\\Account\\Logout.cshtml",
+              "ToolTip": "F:\\Projects\\HIPPA\\HIPPA837D\\HIPPAWeb\\Pages\\Account\\Logout.cshtml",
+              "RelativeToolTip": "HIPPAWeb\\Pages\\Account\\Logout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAB5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2023-09-29T18:02:09.372Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MessageList.cshtml",
+              "DocumentMoniker": "F:\\Projects\\HIPPA\\HIPPA837D\\HIPPAWeb\\Pages\\List\\MessageList.cshtml",
+              "RelativeDocumentMoniker": "HIPPAWeb\\Pages\\List\\MessageList.cshtml",
+              "ToolTip": "F:\\Projects\\HIPPA\\HIPPA837D\\HIPPAWeb\\Pages\\List\\MessageList.cshtml",
+              "RelativeToolTip": "HIPPAWeb\\Pages\\List\\MessageList.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG0AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2023-09-29T05:35:54.483Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "HIPPAWeb",
+              "DocumentMoniker": "F:\\Projects\\HIPPA\\HIPPA837D\\HIPPAWeb\\HIPPAWeb.csproj",
+              "RelativeDocumentMoniker": "HIPPAWeb\\HIPPAWeb.csproj",
+              "ToolTip": "F:\\Projects\\HIPPA\\HIPPA837D\\HIPPAWeb\\HIPPAWeb.csproj",
+              "RelativeToolTip": "HIPPAWeb\\HIPPAWeb.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2023-09-29T06:25:58.285Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Message.cs",
+              "DocumentMoniker": "F:\\Projects\\HIPPA\\HIPPA837D\\HIPPAWeb\\Models\\Message.cs",
+              "RelativeDocumentMoniker": "HIPPAWeb\\Models\\Message.cs",
+              "ToolTip": "F:\\Projects\\HIPPA\\HIPPA837D\\HIPPAWeb\\Models\\Message.cs",
+              "RelativeToolTip": "HIPPAWeb\\Models\\Message.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-09-29T13:05:32.492Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "F:\\Projects\\HIPPA\\HIPPA837D\\HIPPAWeb\\Pages\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "HIPPAWeb\\Pages\\Account\\Login.cshtml",
+              "ToolTip": "F:\\Projects\\HIPPA\\HIPPA837D\\HIPPAWeb\\Pages\\Account\\Login.cshtml",
+              "RelativeToolTip": "HIPPAWeb\\Pages\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBZwCEAAACIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2023-09-28T15:15:05.088Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Logout.cshtml.cs",
+              "DocumentMoniker": "F:\\Projects\\HIPPA\\HIPPA837D\\HIPPAWeb\\Pages\\Account\\Logout.cshtml.cs",
+              "RelativeDocumentMoniker": "HIPPAWeb\\Pages\\Account\\Logout.cshtml.cs",
+              "ToolTip": "F:\\Projects\\HIPPA\\HIPPA837D\\HIPPAWeb\\Pages\\Account\\Logout.cshtml.cs",
+              "RelativeToolTip": "HIPPAWeb\\Pages\\Account\\Logout.cshtml.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-09-29T18:00:05.206Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "F:\\Projects\\HIPPA\\HIPPA837D\\HIPPAWeb\\appsettings.json",
+              "RelativeDocumentMoniker": "HIPPAWeb\\appsettings.json",
+              "ToolTip": "F:\\Projects\\HIPPA\\HIPPA837D\\HIPPAWeb\\appsettings.json",
+              "RelativeToolTip": "HIPPAWeb\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAACDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2023-09-28T06:07:42.409Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "F:\\Projects\\HIPPA\\HIPPA837D\\HIPPAWeb\\Pages\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "HIPPAWeb\\Pages\\_ViewStart.cshtml",
+              "ToolTip": "F:\\Projects\\HIPPA\\HIPPA837D\\HIPPAWeb\\Pages\\_ViewStart.cshtml",
+              "RelativeToolTip": "HIPPAWeb\\Pages\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAADEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2023-09-29T05:47:22.8Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "F:\\Projects\\HIPPA\\HIPPA837D\\HIPPAWeb\\Pages\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "HIPPAWeb\\Pages\\_ViewImports.cshtml",
+              "ToolTip": "F:\\Projects\\HIPPA\\HIPPA837D\\HIPPAWeb\\Pages\\_ViewImports.cshtml",
+              "RelativeToolTip": "HIPPAWeb\\Pages\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2023-09-29T17:58:36.319Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "F:\\Projects\\HIPPA\\HIPPA837D\\HIPPAWeb\\Pages\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "HIPPAWeb\\Pages\\Index.cshtml.cs",
+              "ToolTip": "F:\\Projects\\HIPPA\\HIPPA837D\\HIPPAWeb\\Pages\\Index.cshtml.cs",
+              "RelativeToolTip": "HIPPAWeb\\Pages\\Index.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-09-27T16:54:55.495Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "_LayoutLogin.cshtml",
+              "DocumentMoniker": "F:\\Projects\\HIPPA\\HIPPA837D\\HIPPAWeb\\Pages\\Shared\\_LayoutLogin.cshtml",
+              "RelativeDocumentMoniker": "HIPPAWeb\\Pages\\Shared\\_LayoutLogin.cshtml",
+              "ToolTip": "F:\\Projects\\HIPPA\\HIPPA837D\\HIPPAWeb\\Pages\\Shared\\_LayoutLogin.cshtml",
+              "RelativeToolTip": "HIPPAWeb\\Pages\\Shared\\_LayoutLogin.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBZwBoAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2023-09-29T11:39:18.645Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "UserModel.cs",
+              "DocumentMoniker": "F:\\Projects\\HIPPA\\HIPPA837D\\HIPPAWeb\\Models\\FormModels\\UserModel.cs",
+              "RelativeDocumentMoniker": "HIPPAWeb\\Models\\FormModels\\UserModel.cs",
+              "ToolTip": "F:\\Projects\\HIPPA\\HIPPA837D\\HIPPAWeb\\Models\\FormModels\\UserModel.cs",
+              "RelativeToolTip": "HIPPAWeb\\Models\\FormModels\\UserModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-09-28T15:09:08.269Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "User.cs",
+              "DocumentMoniker": "F:\\Projects\\HIPPA\\HIPPA837D\\HIPPAWeb\\Models\\User.cs",
+              "RelativeDocumentMoniker": "HIPPAWeb\\Models\\User.cs",
+              "ToolTip": "F:\\Projects\\HIPPA\\HIPPA837D\\HIPPAWeb\\Models\\User.cs",
+              "RelativeToolTip": "HIPPAWeb\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-09-28T09:04:27.429Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+﻿@page
+@model HIPPAWeb.Pages.Account.LogoutModel
+@Html.AntiForgeryToken()
+@{
+    ViewData["Title"] = "HIPPA Messaging Console - Logout";
+}
+<div class="login-box">
+    <div class="login-logo">
+        <a href="#"><b>HIPPA</b>Messaging Console</a>
+    </div>
+    <!-- /.login-logo -->
+    <div class="card">
+        <div class="card-body login-card-body">
+            
+            <p class="login-box-msg">Are you sure you want to logout?</p>
+            <form method="post">
+                <button type="submit" value="submit" asp-page-handler="Logout" class="btn btn-primary btn-block">Sign Out</button>
+            </form>
+          
+        </div>
+        <!-- /.login-card-body -->
+    </div>
+</div>
+

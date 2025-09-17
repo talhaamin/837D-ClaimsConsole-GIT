@@ -1,0 +1,905 @@
+﻿@page
+@model HIPPAWeb.Pages.PrototypeModel
+@{
+    ViewData["Title"] = "HIPPA Messaging Console - Prototype";
+    
+}
+
+
+<!-- CodeMirror -->
+<link rel="stylesheet" href="~/templatecontent/plugins/codemirror/codemirror.css">
+<link rel="stylesheet" href="~/templatecontent/plugins/codemirror/theme/monokai.css">
+<!-- Select2 -->
+<link rel="stylesheet" href="~/templatecontent/plugins/select2/css/select2.min.css">
+<link rel="stylesheet" href="~/templatecontent/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <!-- Default box -->
+
+                <div class="card card-primary card-outline card-tabs">
+                    <div class="card-header p-0 pt-1 border-bottom-0">
+                        <ul class="nav nav-tabs" id="custom-tabs-three-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="custom-tabs-three-home-tab" data-toggle="pill" href="#custom-tabs-three-home" role="tab" aria-controls="custom-tabs-three-home" aria-selected="true">Data Input</a>
+                            </li>
+                            @*<li class="nav-item" style="display:none;">*@
+                                <li class="nav-item" style="display:none;">
+                                <a class="nav-link" id="custom-tabs-three-messages-tab" data-toggle="pill" href="#custom-tabs-three-messages" role="tab" aria-controls="custom-tabs-three-messages" aria-selected="false">XML</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <div class="tab-content" id="custom-tabs-three-tabContent">
+                            <div class="tab-pane fade show active" id="custom-tabs-three-home" role="tabpanel" aria-labelledby="custom-tabs-three-home-tab">
+                                <!--Input Form-->
+                                <!-- SELECT2 EXAMPLE -->
+                                <div class="card card-primary">
+                                    <div class="card-header">
+                                        <h3 class="card-title">DENTAL CLAIM</h3>
+
+                                        <div class="card-tools">
+                                            <button id="downloadButton" class="btn btn-warning" type="button">Download XML</button>
+                                            @*<button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                            <i class="fas fa-minus"></i>
+                                            </button>*@
+
+                                        </div>
+                                    </div>
+                                    <!-- /.card-header -->
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <form asp-page-handler="post" method="post" name="form1">
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                              
+                                                                <input type="text" asp-for="message.TestScenarioName" class="form-control" placeholder="Test Scenario Name">
+                                                                <span asp-validation-for="message.TestScenarioName" class="text-danger"></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-1">
+                                                            <input id="hdXML" type="hidden" asp-for="message.MessageXml" class="form-control">
+                                                        </div>
+                                                        <div class="col-md-1">
+                                                            <label>Is Private</label>
+                                                        </div>
+                                                        <div class="col-md-2">
+
+                                                            <input type="checkbox" asp-for="message.IsPrivate" class="form-control">
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <input id="saveButton" value="Save Form" asp-page-handler="Save" class="btn btn-warning" type="submit" />
+                                                        </div>
+                                                    </div>
+                                                        <input id="hdMessageId" type="hidden" asp-for="message.MessageId" class="form-control">
+                                                    <input id="hdUserId" type="hidden" asp-for="message.UserId" class="form-control">
+                                                    <input id="hdMessageText" type="hidden" asp-for="message.MessageText" class="form-control">
+                                                </form>
+
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">&nbsp;</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <!--Segment Card 1-->
+                                                <div class="card card-danger">
+                                                    <div class="card-header">
+                                                        <h4 class="card-title" style="font-size:0.9rem">CLAIM DATA</h4>
+                                                    </div>
+                                                    <div class="card-body">
+
+                                                        <!--Segment Card 1-->
+                                                        <div class="card card-primary">
+                                                            <div class="card-header">
+                                                                <h4 class="card-title" style="font-size:0.9rem">CLAIM MASTER DATA</h4>
+                                                            </div>
+
+                                                            <div id="divCMbody" class="card-body">
+                                                                <div class="row">
+                                                                    <div class="col-md-2">
+                                                                        <div class="form-group">
+                                                                            <label>Claim Number</label>
+                                                                            <input type="text" id="CLAIMNUMBER" title="<CLAIMNUMBER>" class="form-control select2bs4 form-control-sm" placeholder="Claim Number" style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+                                                                    <div class="col-md-2">
+                                                                        <div class="form-group">
+                                                                            <label>Claim Sequence</label>
+                                                                            <input type="text" id="CLAIMSEQUENCE" title="<CLAIMSEQUENCE>" class="form-control select2bs4 form-control-sm" placeholder="Claim Sequence" style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label>First Date Of Service</label>
+                                                                            <input type="text" id="FIRSTDOS" title="<FIRSTDOS>" class="form-control select2bs4 form-control-sm" placeholder="First Date Of Service" style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+                                                                    <div class="col-md-2">
+                                                                        <div class="form-group">
+                                                                            <label>Group Number</label>
+                                                                            <input type="text" id="GROUPNUMBER" title="<GROUPNUMBER>" class="form-control select2bs4 form-control-sm" placeholder="Group Number" style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label>Division Number</label>
+                                                                            <input type="text" id="DIVISIONNUMBER" title="<DIVISIONNUMBER>" class="form-control select2bs4 form-control-sm" placeholder="Division Number" style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+
+                                                                </div>
+                                                                <!-- /.row -->
+                                                                <div class="row">
+                                                                    <div class="col-md-2">
+                                                                        <div class="form-group">
+                                                                            <label>Payment Order</label>
+                                                                            <input type="text" id="PAYMENTORDER" title="<PAYMENTORDER>" class="form-control select2bs4 form-control-sm" placeholder="Payment Order" style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+                                                                    <div class="col-md-2">
+                                                                        <div class="form-group">
+                                                                            <label>Authentication Status</label>
+                                                                            <input type="text" id="PREAUTHSTATUS" title="<PREAUTHSTATUS>" class="form-control select2bs4 form-control-sm" placeholder="Authentication Status" style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+                                                                    <div class="col-md-2">
+                                                                        <div class="form-group">
+                                                                            <label>Relationship Code</label>
+                                                                            <input type="text" id="RELATIONSHIPCODE" title="<RELATIONSHIPCODE>" class="form-control select2bs4 form-control-sm" placeholder="Relationship Code" style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label>Total OC Payment</label>
+                                                                            <input type="text" id="TOTALOCPAYMENT" title="<TOTALOCPAYMENT>" class="form-control select2bs4 form-control-sm" placeholder="Total OC Payment" style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label>Total Patient Payment</label>
+                                                                            <input type="text" id="TOTALPATIENTPAYMENT" title="<TOTALPATIENTPAYMENT>" class="form-control select2bs4 form-control-sm" placeholder="Total Patient Payment" style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+
+                                                                </div>
+                                                                <!-- /.row -->
+                                                                <div class="row">
+                                                                    <div class="col-md-2">
+                                                                        <div class="form-group">
+                                                                            <label>Total Submit Amount</label>
+                                                                            <input type="text" id="TOTALSUBMITAMOUNT" title="<TOTALSUBMITAMOUNT>" class="form-control select2bs4 form-control-sm" placeholder="Total Submit Amount" style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label>Total Plan Payment</label>
+                                                                            <input type="text" id="TOTALPLANPAYMENT" title="<TOTALPLANPAYMENT>" class="form-control select2bs4 form-control-sm" placeholder="Total Plan Payment" style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label>Payment Dest.</label>
+                                                                            <input type="text" id="PAYMENTDESTINATION" title="<PAYMENTDESTINATION>" class="form-control select2bs4 form-control-sm" placeholder="Payment Destination" style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+                                                                    <div class="col-md-2">
+                                                                        <div class="form-group">
+                                                                            <label>Check Date</label>
+                                                                            <input type="text" id="CHECKDATE" title="<CHECKDATE>" class="form-control select2bs4 form-control-sm" placeholder="Check Date" style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+
+                                                                    <div class="col-md-2">
+                                                                        <div class="form-group">
+                                                                            <label>Subscriber Person No.</label>
+                                                                            <input type="text" id="SUBSCRIBERPERSONNUMBER" title="<SUBSCRIBERPERSONNUMBER>" class="form-control select2bs4 form-control-sm" placeholder="Subscriber Person No." style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+
+                                                                </div>
+                                                                <!-- /.row -->
+                                                                <div class="row">
+                                                                    <div class="col-md-2">
+                                                                        <div class="form-group">
+                                                                            <label>Patient Person No.</label>
+                                                                            <input type="text" id="PATIENTPERSONNUMBER" title="<PATIENTPERSONNUMBER>" class="form-control select2bs4 form-control-sm" placeholder="Patient Person No." style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+                                                                    <div class="col-md-2">
+                                                                        <div class="form-group">
+                                                                            <label>CP Invoice No.</label>
+                                                                            <input type="text" id="CPINVOICENUMBER" title="<CPINVOICENUMBER>" class="form-control select2bs4 form-control-sm" placeholder="CP Invoice No." style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+                                                                    <div class="col-md-2">
+                                                                        <div class="form-group">
+                                                                            <label>Provider First Name</label>
+                                                                            <input type="text" id="PROVIDERFIRSTNAME" title="<PROVIDERFIRSTNAME>" class="form-control select2bs4 form-control-sm" placeholder="Provider First Name" style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+                                                                    <div class="col-md-2">
+                                                                        <div class="form-group">
+                                                                            <label>Provider Middle Name</label>
+                                                                            <input type="text" id="PROVIDERMIDDLEINITIAL" title="<PROVIDERMIDDLEINITIAL>" class="form-control select2bs4 form-control-sm" placeholder="Provider Middle Name" style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+
+                                                                    <div class="col-md-2">
+                                                                        <div class="form-group">
+                                                                            <label>Provider Last Name</label>
+                                                                            <input type="text" id="PROVIDERLASTNAME" title="<PROVIDERLASTNAME>" class="form-control select2bs4 form-control-sm" placeholder="Provider Last Name" style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+                                                                    <div class="col-md-2">
+                                                                        <div class="form-group">
+                                                                            <label>Provider Name Suffix</label>
+                                                                            <input type="text" id="PROVIDERNAMESUFFIX" title="<PROVIDERNAMESUFFIX>" class="form-control select2bs4 form-control-sm" placeholder="Provider Name Suffix" style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+
+                                                                </div>
+                                                                <!-- /.row -->
+                                                                <div class="row">
+                                                                    <div class="col-md-2">
+                                                                        <div class="form-group">
+                                                                            <label>Provider License No.</label>
+                                                                            <input type="text" id="PROVIDERLICENSENUMBER" title="<PROVIDERLICENSENUMBER>" class="form-control select2bs4 form-control-sm" placeholder="Provider License No." style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+                                                                    <div class="col-md-2">
+                                                                        <div class="form-group">
+                                                                            <label>Provider Pin No.</label>
+                                                                            <input type="text" id="PROVIDERNPINUMBER" title="<PROVIDERNPINUMBER>" class="form-control select2bs4 form-control-sm" placeholder="Provider Pin No." style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+                                                                    <div class="col-md-2">
+                                                                        <div class="form-group">
+                                                                            <label>Provider OPS No.</label>
+                                                                            <input type="text" id="PROVIDEROPSNUMBER" title="<PROVIDEROPSNUMBER>" class="form-control select2bs4 form-control-sm" placeholder="Provider OPS No." style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group">
+                                                                            <label>Provider Address 1</label>
+                                                                            <input type="text" id="PROVIDERADDRESSLINE1" title="<PROVIDERADDRESSLINE1>" class="form-control select2bs4 form-control-sm" placeholder="Provider Address 1" style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+
+
+                                                                </div>
+                                                                <!-- /.row -->
+                                                                <div class="row">
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group">
+                                                                            <label>Provider Address 2</label>
+                                                                            <input type="text" id="PROVIDERADDRESSLINE2" title="<PROVIDERADDRESSLINE2>" class="form-control select2bs4 form-control-sm" placeholder="Provider Address 2" style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+
+                                                                    <div class="col-md-2">
+                                                                        <div class="form-group">
+                                                                            <label>Provider City</label>
+                                                                            <input type="text" id="PROVIDERADDRESSCITY" title="<PROVIDERADDRESSCITY>" class="form-control select2bs4 form-control-sm" placeholder="Provider City" style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+                                                                    <div class="col-md-2">
+                                                                        <div class="form-group">
+                                                                            <label>Provider State</label>
+                                                                            <input type="text" id="PROVIDERADDRESSSTATE" title="<PROVIDERADDRESSSTATE>" class="form-control select2bs4 form-control-sm" placeholder="Provider State" style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+                                                                    <div class="col-md-2">
+                                                                        <div class="form-group">
+                                                                            <label>Provider Zip</label>
+                                                                            <input type="text" id="PROVIDERADDRESSZIP" title="<PROVIDERADDRESSZIP>" class="form-control select2bs4 form-control-sm" placeholder="Provider Zip" style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+
+
+                                                                </div>
+                                                                <!-- /.row -->
+                                                                <div class="row">
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group">
+                                                                            <label>Provider Pay to Address 1</label>
+                                                                            <input type="text" id="PROVIDERPAYTOADDRESSLINE1" title="<PROVIDERPAYTOADDRESSLINE1>" class="form-control select2bs4 form-control-sm" placeholder="Provider Pay to Address 1" style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group">
+                                                                            <label>Provider Pay to Address 2</label>
+                                                                            <input type="text" id="PROVIDERPAYTOADDRESSLINE2" title="<PROVIDERPAYTOADDRESSLINE2>" class="form-control select2bs4 form-control-sm" placeholder="Provider Pay to Address 2" style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+
+
+                                                                </div>
+                                                                <!-- /.row -->
+                                                                <div class="row">
+
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-group">
+                                                                            <label>Provider Pay to City</label>
+                                                                            <input type="text" id="PROVIDERPAYTOCITY" title="<PROVIDERPAYTOCITY>" class="form-control select2bs4 form-control-sm" placeholder="Provider Pay to City" style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-group">
+                                                                            <label>Provider Pay to State</label>
+                                                                            <input type="text" id="PROVIDERPAYTOSTATE" title="<PROVIDERPAYTOSTATE>" class="form-control select2bs4 form-control-sm" placeholder="Provider Pay to State" style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-group">
+                                                                            <label>Provider Pay to Zip</label>
+                                                                            <input type="text" id="PROVIDERPAYTOZIP" title="<PROVIDERPAYTOZIP>" class="form-control select2bs4 form-control-sm" placeholder="Provider Pay to Zip" style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+
+
+                                                                </div>
+                                                                <!-- /.row -->
+                                                                <div class="row">
+
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label>Provider Payee Name</label>
+                                                                            <input type="text" id="PROVIDERPAYEENAME" title="<PROVIDERPAYEENAME>" class="form-control select2bs4 form-control-sm" placeholder="Provider Payee Name" style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label>Provider Trax Filing Id</label>
+                                                                            <input type="text" id="PROVIDERTRAXFILINGID" title="<PROVIDERTRAXFILINGID>" class="form-control select2bs4 form-control-sm" placeholder="Provider Trax Filing Id" style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label>External Id</label>
+                                                                            <input type="text" id="EXTERNALID" title="<EXTERNALID>" class="form-control select2bs4 form-control-sm" placeholder="External Id" style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+
+                                                                    <div class="col-md-3">
+                                                                        <div class="form-group">
+                                                                            <label>Subscriber Client Key</label>
+                                                                            <input type="text" id="SUBSCRIBERCLIENTEXTKEY" title="<SUBSCRIBERCLIENTEXTKEY>" class="form-control select2bs4 form-control-sm" placeholder="Subscriber Client Key" style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+
+                                                                </div>
+                                                                <!-- /.row -->
+
+                                                                <div class="row">
+
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-group">
+                                                                            <label>Subscriber First Name</label>
+                                                                            <input type="text" id="SUBSCRIBERFIRSTNAME" title="<SUBSCRIBERFIRSTNAME>" class="form-control select2bs4 form-control-sm" placeholder="Subscriber First Name" style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-group">
+                                                                            <label>Subscriber Middle Name</label>
+                                                                            <input type="text" id="SUBSCRIBERMIDDLENAME" title="<SUBSCRIBERMIDDLENAME>" class="form-control select2bs4 form-control-sm" placeholder="Subscriber Middle Name" style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-group">
+                                                                            <label>Subscriber Last Name</label>
+                                                                            <input type="text" id="SUBSCRIBERLASTNAME" title="<SUBSCRIBERLASTNAME>" class="form-control select2bs4 form-control-sm" placeholder="Subscriber Last Name" style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+
+
+                                                                </div>
+                                                                <!-- /.row -->
+
+                                                                <div class="row">
+
+                                                                    <div class="col-md-2">
+                                                                        <div class="form-group">
+                                                                            <label>Subscriber Gender</label>
+                                                                            <input type="text" id="SUBSCRIBERSEX" title="<SUBSCRIBERSEX>" class="form-control select2bs4 form-control-sm" placeholder="Subscriber Gender" style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+                                                                    <div class="col-md-2">
+                                                                        <div class="form-group">
+                                                                            <label>Subscriber DOB</label>
+                                                                            <input type="text" id="SUBSCRIBERDATEOFBIRTH" title="<SUBSCRIBERDATEOFBIRTH>" class="form-control select2bs4 form-control-sm" placeholder="Subscriber DOB" style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+
+
+                                                                </div>
+                                                                <!-- /.row -->
+
+                                                            </div>
+                                                            <!-- /.card-body -->
+                                                            <div id="divCMfooter" style="display:none;" class="card-footer">
+                                                            </div>
+                                                        </div>
+                                                        <!-- /.card -->
+                                                        <!--Segment Card 2-->
+                                                        <div class="card card-info">
+                                                            <div class="card-header">
+                                                                <h4 class="card-title" style="font-size:0.9rem">OTHER CONDITIONS / OCCURANCE CODES</h4>
+
+                                                                <div class="card-tools">
+                                                                    <button id="addOC" type="button" class="btn btn-tool">
+                                                                        <i class="fas fa-plus"></i>
+                                                                    </button>
+
+                                                                </div>
+                                                            </div>
+
+                                                            <div id="divOCbody" class="card-body">
+                                                                <div id="divOCbodyRows0">
+                                                                    <div class="row">
+                                                                        <div class="col-md-2">
+                                                                            <div class="form-group">
+                                                                                <label>OC Id</label>
+                                                                                <input type="text" id="OCID" title="<OCID>" class="form-control select2bs4 form-control-sm" placeholder="OC Id" style="width: 100%;">
+                                                                            </div>
+                                                                            <!-- /.form-group -->
+                                                                        </div>
+                                                                        <div class="col-md-3">
+                                                                            <div class="form-group">
+                                                                                <label>OC Relationship to Subscriber</label>
+                                                                                <input type="text" id="OCRELATIONSHIPTOSUBSCRIBER" title="<OCRELATIONSHIPTOSUBSCRIBER>" class="form-control select2bs4 form-control-sm" placeholder="OC Relationship to Subscriber" style="width: 100%;">
+                                                                            </div>
+                                                                            <!-- /.form-group -->
+                                                                        </div>
+                                                                        <div class="col-md-4">
+                                                                            <div class="form-group">
+                                                                                <label>OC Subscriber First Name</label>
+                                                                                <input type="text" id="OCSUBSCRIBERFIRSTNAME" title="<OCSUBSCRIBERFIRSTNAME>" class="form-control select2bs4 form-control-sm" placeholder="OC Subscriber First Name" style="width: 100%;">
+                                                                            </div>
+                                                                            <!-- /.form-group -->
+                                                                        </div>
+                                                                        <div class="col-md-3">
+                                                                            <div class="form-group">
+                                                                                <label>OC Subscriber Last Name</label>
+                                                                                <input type="text" id="OCSUBSCRIBERLASTNAME" title="<OCSUBSCRIBERLASTNAME>" class="form-control select2bs4 form-control-sm" placeholder="OC Subscriber Last Name" style="width: 100%;">
+                                                                            </div>
+                                                                            <!-- /.form-group -->
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- /.row -->
+                                                                    <div class="row">
+                                                                        <div class="col-md-12">
+                                                                            <div class="form-group">
+                                                                                <label>OC Name</label>
+                                                                                <input type="text" id="OCNAME" title="<OCNAME>" class="form-control select2bs4 form-control-sm" placeholder="OC Name" style="width: 100%;">
+                                                                            </div>
+                                                                            <!-- /.form-group -->
+                                                                        </div>
+
+                                                                    </div>
+                                                                    <!-- /.row -->
+                                                                </div>
+                                                            </div>
+                                                            <!-- /.card-body -->
+                                                            <div id="divOCfooter" style="display:none;" class="card-footer">
+                                                                <div id="divOCfooterRows0" style="display:none;">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+                                                        <!--Segment Card 3-->
+                                                        <div class="card card-success">
+                                                            <div class="card-header">
+                                                                <h4 class="card-title" style="font-size:0.9rem">PATIENT INFORMATION</h4>
+                                                            </div>
+                                                            <div id="divPATIbody" class="card-body">
+                                                                <div class="row">
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-group">
+                                                                            <label>Patient Client Key</label>
+                                                                            <input type="text" id="PATIENTCLIENTEXTKEY" title="<PATIENTCLIENTEXTKEY>" class="form-control select2bs4 form-control-sm" placeholder="Patient Client Key" style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-group">
+                                                                            <label>Paatient First Name</label>
+                                                                            <input type="text" id="PATIENTFIRSTNAME" title="<PATIENTFIRSTNAME>" class="form-control select2bs4 form-control-sm" placeholder="Patient First Name" style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-group">
+                                                                            <label>Patient Middle Name</label>
+                                                                            <input type="text" id="PATIENTMIDDLENAME" title="<PATIENTMIDDLENAME>" class="form-control select2bs4 form-control-sm" placeholder="Patient Middle Name" style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+
+
+                                                                </div>
+                                                                <!-- /.row -->
+
+                                                                <div class="row">
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-group">
+                                                                            <label>Patient Last Name</label>
+                                                                            <input type="text" id="PATIENTLASTNAME" title="<PATIENTLASTNAME>" class="form-control select2bs4 form-control-sm" placeholder="Patient Last Name" style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+
+                                                                    <div class="col-md-2">
+                                                                        <div class="form-group">
+                                                                            <label>Patient Gender</label>
+                                                                            <input type="text" id="PATIENTSEX" title="<PATIENTSEX>" class="form-control select2bs4 form-control-sm" placeholder="Patient Gender" style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+                                                                    <div class="col-md-2">
+                                                                        <div class="form-group">
+                                                                            <label>Patient DOB</label>
+                                                                            <input type="text" id="PATIENTDATEOFBIRTH" title="<PATIENTDATEOFBIRTH>" class="form-control select2bs4 form-control-sm" placeholder="Patient DOB" style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+
+
+                                                                </div>
+                                                                <!-- /.row -->
+
+                                                            </div>
+                                                            <!-- /.card-body -->
+                                                            <div id="divPATIfooter" style="display:none;" class="card-footer">
+                                                            </div>
+                                                        </div>
+                                                        <!-- /.card -->
+                                                        <!--Segment Card 4-->
+                                                        <div class="card card-dark">
+                                                            <div class="card-header">
+                                                                <h4 class="card-title" style="font-size:0.9rem">SERVICE LINES</h4>
+                                                                <div class="card-tools">
+                                                                    <button id="addSL" type="button" class="btn btn-tool">
+                                                                        <i class="fas fa-plus"></i>
+                                                                    </button>
+
+                                                                </div>
+                                                            </div>
+                                                            <div id="divSLbody" class="card-body">
+                                                                <div id="divSLbodyRows0">
+                                                                    <div class="row">
+
+                                                                        <div class="col-md-2">
+                                                                            <div class="form-group">
+                                                                                <label>Line No.</label>
+                                                                                <input type="text" id="LINENUMBER" title="<LINENUMBER>" class="form-control select2bs4 form-control-sm" placeholder="Line No." style="width: 100%;">
+                                                                            </div>
+                                                                            <!-- /.form-group -->
+                                                                        </div>
+                                                                        <div class="col-md-2">
+                                                                            <div class="form-group">
+                                                                                <label>Processed Line No.</label>
+                                                                                <input type="text" id="PROCESSEDLINENUMBER" title="<PROCESSEDLINENUMBER>" class="form-control select2bs4 form-control-sm" placeholder="Processed Line No." style="width: 100%;">
+                                                                            </div>
+                                                                            <!-- /.form-group -->
+                                                                        </div>
+
+                                                                        <div class="col-md-2">
+                                                                            <div class="form-group">
+                                                                                <label>Billed Procedure</label>
+                                                                                <input type="text" id="BILLEDADAPROCEDURE" title="<BILLEDADAPROCEDURE>" class="form-control select2bs4 form-control-sm" placeholder="Billed Procedure" style="width: 100%;">
+                                                                            </div>
+                                                                            <!-- /.form-group -->
+                                                                        </div>
+                                                                        <div class="col-md-2">
+                                                                            <div class="form-group">
+                                                                                <label>Charge Amount</label>
+                                                                                <input type="text" id="CHARGEAMOUNT" title="<CHARGEAMOUNT>" class="form-control select2bs4 form-control-sm" placeholder="Charge Amount" style="width: 100%;">
+                                                                            </div>
+                                                                            <!-- /.form-group -->
+                                                                        </div>
+                                                                        <div class="col-md-2">
+                                                                            <div class="form-group">
+                                                                                <label>Approval Amount</label>
+                                                                                <input type="text" id="APPROVALAMOUNT" title="<APPROVALAMOUNT>" class="form-control select2bs4 form-control-sm" placeholder="Approval Amount" style="width: 100%;">
+                                                                            </div>
+                                                                            <!-- /.form-group -->
+                                                                        </div>
+                                                                        <div class="col-md-2">
+                                                                            <div class="form-group">
+                                                                                <label>Patient Payment</label>
+                                                                                <input type="text" id="PATIENTPAYMENT" title="<PATIENTPAYMENT>" class="form-control select2bs4 form-control-sm" placeholder="Patient Payment" style="width: 100%;">
+                                                                            </div>
+                                                                            <!-- /.form-group -->
+                                                                        </div>
+
+                                                                    </div>
+                                                                    <!-- /.row -->
+                                                                    <div class="row">
+
+                                                                        <div class="col-md-2">
+                                                                            <div class="form-group">
+                                                                                <label>Net Payment</label>
+                                                                                <input type="text" id="NETPAYMENT" title="<NETPAYMENT>" class="form-control select2bs4 form-control-sm" placeholder="Net Payment" style="width: 100%;">
+                                                                            </div>
+                                                                            <!-- /.form-group -->
+                                                                        </div>
+                                                                        <div class="col-md-3">
+                                                                            <div class="form-group">
+                                                                                <label>Adjustment Indicator</label>
+                                                                                <input type="text" id="ADJUSTMENTINDICATOR" title="<ADJUSTMENTINDICATOR>" class="form-control select2bs4 form-control-sm" placeholder="Adjustment Indicator" style="width: 100%;">
+                                                                            </div>
+                                                                            <!-- /.form-group -->
+                                                                        </div>
+                                                                        <div class="col-md-2">
+                                                                            <div class="form-group">
+                                                                                <label>Other Plan Payment</label>
+                                                                                <input type="text" id="OTHERPLANPAYMENT" title="<OTHERPLANPAYMENT>" class="form-control select2bs4 form-control-sm" placeholder="Other Plan Payment" style="width: 100%;">
+                                                                            </div>
+                                                                            <!-- /.form-group -->
+                                                                        </div>
+                                                                        <div class="col-md-3">
+                                                                            <div class="form-group">
+                                                                                <label>Billed Tooth No.</label>
+                                                                                <input type="text" id="BILLEDTOOTHNUMBER" title="<BILLEDTOOTHNUMBER>" class="form-control select2bs4 form-control-sm" placeholder="Billed Tooth No." style="width: 100%;">
+                                                                            </div>
+                                                                            <!-- /.form-group -->
+                                                                        </div>
+                                                                        <div class="col-md-2">
+                                                                            <div class="form-group">
+                                                                                <label>Billed Tooth Surface</label>
+                                                                                <input type="text" id="BILLEDTOOTHSURFACE" title="<BILLEDTOOTHSURFACE>" class="form-control select2bs4 form-control-sm" placeholder="Billed Tooth Surface" style="width: 100%;">
+                                                                            </div>
+                                                                            <!-- /.form-group -->
+                                                                        </div>
+
+
+                                                                    </div>
+                                                                    <!-- /.row -->
+                                                                </div>
+                                                                <!-- /.row -->
+                                                            </div>
+                                                            <!-- /.card-body -->
+                                                            <div id="divSLfooter" style="display:none;" class="card-footer">
+                                                                <div id="divSLfooterRows0" style="display:none;"></div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- /.card -->
+                                                        <!--Segment Card 5-->
+                                                        <div class="card card-secondary">
+                                                            <div class="card-header">
+                                                                <h4 class="card-title" style="font-size:0.9rem">MAILING ADDRESS</h4>
+                                                                <div class="card-tools">
+                                                                    <button id="addMailAddress" type="button" class="btn btn-tool">
+                                                                        <i class="fas fa-plus"></i>
+                                                                    </button>
+
+                                                                </div>
+                                                            </div>
+                                                            <div id="divMLbody" class="card-body">
+                                                                <div id="divMLbodyRows0">
+                                                                    <div class="row">
+
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label>Address Line 1</label>
+                                                                                <input type="text" id="ADDRESSLINE1" title="<ADDRESSLINE1>" class="form-control select2bs4 form-control-sm" placeholder="Address Line 1" style="width: 100%;">
+                                                                            </div>
+                                                                            <!-- /.form-group -->
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label>Address Line 2</label>
+                                                                                <input type="text" id="ADDRESSLINE2" title="<ADDRESSLINE2>" class="form-control select2bs4 form-control-sm" placeholder="Address Line 2" style="width: 100%;">
+                                                                            </div>
+                                                                            <!-- /.form-group -->
+                                                                        </div>
+
+                                                                    </div>
+                                                                    <!-- /.row -->
+                                                                    <div class="row">
+
+                                                                        <div class="col-md-3">
+                                                                            <div class="form-group">
+                                                                                <label>City</label>
+                                                                                <input type="text" id="ADDRESSCITY" title="<ADDRESSCITY>" class="form-control select2bs4 form-control-sm" placeholder="City" style="width: 100%;">
+                                                                            </div>
+                                                                            <!-- /.form-group -->
+                                                                        </div>
+                                                                        <div class="col-md-3">
+                                                                            <div class="form-group">
+                                                                                <label>State</label>
+                                                                                <input type="text" id="ADDRESSSTATE" title="<ADDRESSSTATE>" class="form-control select2bs4 form-control-sm" placeholder="State" style="width: 100%;">
+                                                                            </div>
+                                                                            <!-- /.form-group -->
+                                                                        </div>
+                                                                        <div class="col-md-3">
+                                                                            <div class="form-group">
+                                                                                <label>Zip Code</label>
+                                                                                <input type="text" id="ADDRESSZIP" title="<ADDRESSZIP>" class="form-control select2bs4 form-control-sm" placeholder="Zip Code" style="width: 100%;">
+                                                                            </div>
+                                                                            <!-- /.form-group -->
+                                                                        </div>
+                                                                        <div class="col-md-3">
+                                                                            <div class="form-group">
+                                                                                <label>Country</label>
+                                                                                <input type="text" id="ADDRESSCOUNTRY" title="<ADDRESSCOUNTRY>" class="form-control select2bs4 form-control-sm" placeholder="Country" style="width: 100%;">
+                                                                            </div>
+                                                                            <!-- /.form-group -->
+                                                                        </div>
+
+
+                                                                    </div>
+                                                                    <!-- /.row -->
+                                                                </div>
+                                                            </div>
+                                                            <!-- /.card-body -->
+                                                            <div id="divMLfooter" style="display:none;" class="card-footer">
+                                                                <div id="divMLfooterRows0" style="display:none;"></div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- /.card -->
+                                                        <!--Segment Card 17-->
+                                                        <div class="card card-warning">
+                                                            <div class="card-header">
+                                                                <h4 class="card-title" style="font-size:0.9rem">CLAIM COMMENTS</h4>
+                                                            </div>
+                                                            <div id="divCbody" class="card-body">
+                                                                <div class="row">
+
+                                                                    <div class="col-md-12">
+                                                                        <div class="form-group">
+                                                                            <label>Claim Comments</label>
+                                                                            <input type="text" id="COMMENTS" title="<COMMENTS>" class="form-control select2bs4 form-control-sm" placeholder="Comments" style="width: 100%;">
+                                                                        </div>
+                                                                        <!-- /.form-group -->
+                                                                    </div>
+
+
+                                                                </div>
+                                                                <!-- /.row -->
+
+                                                            </div>
+                                                            <!-- /.card-body -->
+                                                            <div id="divCfooter" style="display:none;" class="card-footer">
+                                                            </div>
+                                                        </div>
+                                                        <!-- /.card -->
+
+                                                    </div>
+                                                    <!-- /.card-body -->
+                                                </div>
+                                                <!-- /.card -->
+
+
+
+
+                                            </div>
+                                            <!-- /.col -->
+                                        </div>
+                                        <!-- /.row -->
+                                    </div>
+                                    <!-- /.card-body -->
+                                    <div class="card-footer">
+                                    </div>
+                                </div>
+                                <!-- /.card -->
+
+                            </div>
+
+                            <div class="tab-pane fade" id="custom-tabs-three-messages" role="tabpanel" aria-labelledby="custom-tabs-three-messages-tab">
+                                <section class="content">
+
+                                    <!-- ./row -->
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="card card-outline card-info">
+
+                                                <div class="card-body p-0">
+
+<textarea id="xmlPrototype" class="p-3"> 
+</textarea>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <!-- /.col-->
+                                    </div>
+                                    <!-- ./row -->
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+
+                                            <button id="downloadButton1" type="button">Download XML</button>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- /.card -->
+                </div>
+
+
+                <!-- /.card -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /.content -->
+<!-- CodeMirror -->
+<script src="~/templatecontent/plugins/codemirror/codemirror.js"></script>
+<script src="~/templatecontent/plugins/codemirror/mode/css/css.js"></script>
+<script src="~/templatecontent/plugins/codemirror/mode/xml/xml.js"></script>
+<script src="~/templatecontent/plugins/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+
+@section Scripts {
+
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
+    @if ((ViewData["LoadData"] != null) && ((bool)(ViewData["LoadData"]) == true))
+    {
+        <script type="text/javascript">
+         
+                fillDataFromXML();
+        
+        </script>
+    }
+
+}

@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HIPPA837D", "HIPPA837D\HIPPA837D.csproj", "{9085E4B0-1023-4C77-AD5E-0F5687A0982B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{73944031-B179-4EB9-AFB2-3704F231FCEB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HIPPAWeb", "HIPPAWeb\HIPPAWeb.csproj", "{CBD540A7-1D74-415D-A14B-67BFAD0A4225}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9085E4B0-1023-4C77-AD5E-0F5687A0982B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9085E4B0-1023-4C77-AD5E-0F5687A0982B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9085E4B0-1023-4C77-AD5E-0F5687A0982B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9085E4B0-1023-4C77-AD5E-0F5687A0982B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBD540A7-1D74-415D-A14B-67BFAD0A4225}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBD540A7-1D74-415D-A14B-67BFAD0A4225}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBD540A7-1D74-415D-A14B-67BFAD0A4225}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBD540A7-1D74-415D-A14B-67BFAD0A4225}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9085E4B0-1023-4C77-AD5E-0F5687A0982B} = {73944031-B179-4EB9-AFB2-3704F231FCEB}
+		{CBD540A7-1D74-415D-A14B-67BFAD0A4225} = {73944031-B179-4EB9-AFB2-3704F231FCEB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C7C89AD4-9E6B-40A8-B7A9-2B8D20CFE80C}
+	EndGlobalSection
+EndGlobal

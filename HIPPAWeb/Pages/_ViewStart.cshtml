@@ -1,0 +1,14 @@
+﻿@{
+    string cLayout = "";
+    
+    if (Context.Request.Path.Value.Contains("login") || Context.Request.Path.Value.Contains("Login") || Context.Request.Path.Value.Contains("logout") || Context.Request.Path.Value.Contains("Logout"))
+    {
+        cLayout = "Shared/_LayoutLogin.cshtml";
+    }
+    else
+    {
+        cLayout = "Shared/_Layout.cshtml";
+    }
+    Layout = cLayout;
+    
+}

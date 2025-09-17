@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>F:\Projects\HIPPA\Publish</_PublishTargetUrl>
+    <History>True|2023-10-05T05:33:55.0377213Z;True|2023-10-04T22:17:48.0640540+05:00;True|2023-10-04T20:39:51.0226298+05:00;True|2023-10-04T16:31:30.4921455+05:00;True|2023-10-04T16:29:10.1753149+05:00;True|2023-09-29T23:32:40.0905170+05:00;True|2023-09-29T22:45:15.2773728+05:00;True|2023-09-29T22:02:22.9982594+05:00;True|2023-09-21T12:26:16.8454829+05:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>
